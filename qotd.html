@@ -1,63 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QOTD Template Generator</title>
     <style>
+        /*
+                        _______
+                       /       \
+                      .==.    .==.
+                     ((  ))==((  ))
+                    / "=="    "=="\
+                   /____|| || ||___\
+       ________     ____    ________  ___    ___
+       |  ___  \   /    \   |  ___  \ |  |  /  /
+       |  |  \  \ /  /\  \  |  |  \  \|  |_/  /
+       |  |   )  /  /__\  \ |  |__/  /|  ___  \
+       |  |__/  /  ______  \|  ____  \|  |  \  \
+_______|_______/__/ ____ \__\__|___\__\__|___\__\____
+|  ___  \ |  ____/ /    \   |  ___  \ |  ____|  ___  \
+|  |  \  \|  |___ /  /\  \  |  |  \  \|  |___|  |  \  \
+|  |__/  /|  ____/  /__\  \ |  |   )  |  ____|  |__/  /
+|  ____  \|  |__/  ______  \|  |__/  /|  |___|  ____  \
+|__|   \__\____/__/      \__\_______/ |______|__|   \__\
+                https://darkreader.org
+*/
+
+        /*! Dark reader generated CSS | Licensed under MIT https://github.com/darkreader/darkreader/blob/main/LICENSE */
+
+        /* User-Agent Style */
+        html {
+            background-color: #181a1b !important;
+        }
+
+        html {
+            color-scheme: dark !important;
+        }
+
+        html,
+        body,
+        input,
+        textarea,
+        select,
+        button,
+        dialog {
+            background-color: #181a1b;
+        }
+
+        html,
+        body,
+        input,
+        textarea,
+        select,
+        button {
+            border-color: #736b5e;
+            color: #e8e6e3;
+        }
+
+        a {
+            color: #3391ff;
+        }
+
+        table {
+            border-color: #545b5e;
+        }
+
+        ::placeholder {
+            color: #b2aba1;
+        }
+
+        input:-webkit-autofill,
+        textarea:-webkit-autofill,
+        select:-webkit-autofill {
+            background-color: #404400 !important;
+            color: #e8e6e3 !important;
+        }
+
+        ::-webkit-scrollbar {
+            background-color: #202324;
+            color: #aba499;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #454a4d;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #575e62;
+        }
+
+        ::-webkit-scrollbar-thumb:active {
+            background-color: #484e51;
+        }
+
+        ::-webkit-scrollbar-corner {
+            background-color: #181a1b;
+        }
+
+        ::selection {
+            background-color: #004daa !important;
+            color: #e8e6e3 !important;
+        }
+
+        ::-moz-selection {
+            background-color: #004daa !important;
+            color: #e8e6e3 !important;
+        }
+
+        /* Invert Style */
+        .jfk-bubble.gtx-bubble,
+        .captcheck_answer_label>input+img,
+        span#closed_text>img[src^="https://www.gstatic.com/images/branding/googlelogo"],
+        span[data-href^="https://www.hcaptcha.com/"]>#icon,
+        #bit-notification-bar-iframe,
+        ::-webkit-calendar-picker-indicator {
+            filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
+        }
+
+        /* Variables Style */
+        :root {
+            --darkreader-neutral-background: #131516;
+            --darkreader-neutral-text: #d8d4cf;
+            --darkreader-selection-background: #004daa;
+            --darkreader-selection-text: #e8e6e3;
+        }
+
+        /* Override Style */
+        .vimvixen-hint {
+            background-color: #7b5300 !important;
+            border-color: #d8b013 !important;
+            color: #f3e8c8 !important;
+        }
+
+        ::placeholder {
+            opacity: 0.5 !important;
+        }
+
+        #edge-translate-panel-body,
+        .MuiTypography-body1,
+        .nfe-quote-text {
+            color: var(--darkreader-neutral-text) !important;
+        }
+
+        gr-main-header {
+            background-color: #0f3a48 !important;
+        }
+
+        .tou-z65h9k,
+        .tou-mignzq,
+        .tou-1b6i2ox,
+        .tou-lnqlqk {
+            background-color: var(--darkreader-neutral-background) !important;
+        }
+
+        .tou-75mvi {
+            background-color: #032029 !important;
+        }
+
+        .tou-ta9e87,
+        .tou-1w3fhi0,
+        .tou-1b8t2us,
+        .tou-py7lfi,
+        .tou-1lpmd9d,
+        .tou-1frrtv8,
+        .tou-17ezmgn {
+            background-color: #0a0a0a !important;
+        }
+
+        .tou-uknfeu {
+            background-color: #231603 !important;
+        }
+
+        .tou-6i3zyv {
+            background-color: #19576c !important;
+        }
+
         * {
             font-family: monospace;
         }
+
         pre {
             margin-top: 0px;
             margin-bottom: 0px;
         }
     </style>
 </head>
+
 <body>
-    <div id="templatetop"><pre>@QOTD</pre><br></div>
-    <div id="templateqotd"><pre>QOTD: Loading...</pre><br></div>
-    <div id="templatefotd"><pre>FOTD: Loading...</pre><br></div>
-    <div id="templatequote"><pre>Quote: Loading...</pre><br></div>
-    <div id="templatebottom"><pre>Answer in <#691121807960440852></pre><br></div>
-    <script src="jquery.min.js"></script>   
+    <div id="templatetop">
+        <pre>@QOTD</pre><br>
+    </div>
+    <div id="templateqotd">
+        <pre>QOTD: Loading...</pre><br>
+    </div>
+    <div id="templatefotd">
+        <pre>FOTD: Loading...</pre><br>
+    </div>
+    <div id="templatequote">
+        <pre>Quote: Loading...</pre><br>
+    </div>
+    <div id="templatebottom">
+        <pre>Answer in <#691121807960440852></pre><br>
+    </div>
+    <script src="jquery.min.js"></script>
     <script>
-$.ajax({
-    method: 'GET',
-    url: 'https://api.reddit.com/r/askreddit/new.json?limit=100',
-    success: function(result) {
-    console.log(result);
-    const txt = JSON.stringify(result);
-    var obj = JSON.parse(txt);
-    var postnum = Math.floor(Math.random() * 101);
-    const qotd = obj.data.children[postnum].data.title;
-    var qotdString = "QOTD: " + qotd;
-    document.getElementById("templateqotd").innerHTML = "<pre>" + qotdString + "</pre><br>";
-    },
-    error: function ajaxError(jqXHR) {
-        console.error('Error: ', jqXHR.responseText);
-    }
-}); 
-var emoticon = "";
-var emoticonNum = Math.floor(Math.random() * 7);
-if (emoticonNum == 0) {
-    emoticon = ":D";
-} else if (emoticonNum == 1) {
-    emoticon = ":>";
-} else if (emoticonNum == 2) {
-    emoticon = ":)";
-} else if (emoticonNum == 3) {
-    emoticon = ":3";
-} else if (emoticonNum == 4) {
-    emoticon = "=)";
-} else if (emoticonNum == 5) {
-    emoticon = ":o";
-} else {
-    emoticon = ";)";
-}
-document.getElementById("templatebottom").innerHTML = "<pre>Answer in <#691121807960440852> " + emoticon + "</pre>";
-var _0x134dce=_0x256b;function _0x24eb(){var _0x4097ce=['author','7098146DDjfGN','\x22\x20-\x20','337782VnrPUD','application/json','4jVWlsM','67016UPVZDN','replace','6597WsAfyD','47797hlgeTe','</pre><br>','quote','error','parse','getElementById','192101IiHNOE','Quote:\x20\x22','GET','<pre>','responseText','1HHHukaNEC5Kh3iDOLeZjQ==nxxKAnwy9XbK9bYM','87qyqgOJ','Error:\x20','2067936zklLuO','https://api.api-ninjas.com/v1/quotes','log','65FbHazX','innerHTML','ajax','templatefotd','3090STpXxO','https://api.api-ninjas.com/v1/facts?limit=1','stringify','FOTD:\x20','fact'];_0x24eb=function(){return _0x4097ce;};return _0x24eb();}function _0x256b(_0x1bf7f3,_0xb9c59){var _0x24eb94=_0x24eb();return _0x256b=function(_0x256b88,_0x58b79c){_0x256b88=_0x256b88-0x85;var _0x3eff88=_0x24eb94[_0x256b88];return _0x3eff88;},_0x256b(_0x1bf7f3,_0xb9c59);}(function(_0x424170,_0x1a82c0){var _0x1d0e15=_0x256b,_0x10c5ed=_0x424170();while(!![]){try{var _0x4410a2=-parseInt(_0x1d0e15(0x90))/0x1*(-parseInt(_0x1d0e15(0x8c))/0x2)+-parseInt(_0x1d0e15(0x9c))/0x3*(-parseInt(_0x1d0e15(0x8d))/0x4)+-parseInt(_0x1d0e15(0xa1))/0x5*(-parseInt(_0x1d0e15(0x8a))/0x6)+-parseInt(_0x1d0e15(0x96))/0x7+parseInt(_0x1d0e15(0x9e))/0x8+-parseInt(_0x1d0e15(0x8f))/0x9*(parseInt(_0x1d0e15(0xa5))/0xa)+-parseInt(_0x1d0e15(0x88))/0xb;if(_0x4410a2===_0x1a82c0)break;else _0x10c5ed['push'](_0x10c5ed['shift']());}catch(_0x57f455){_0x10c5ed['push'](_0x10c5ed['shift']());}}}(_0x24eb,0xa434b),$[_0x134dce(0xa3)]({'method':_0x134dce(0x98),'url':_0x134dce(0xa6),'headers':{'X-Api-Key':_0x134dce(0x9b)},'contentType':_0x134dce(0x8b),'success':function(_0x19a5aa){var _0x48fd64=_0x134dce;console['log'](_0x19a5aa);const _0x21b977=JSON[_0x48fd64(0xa7)](_0x19a5aa);var _0xaf5f90=_0x21b977[_0x48fd64(0x8e)]('[',''),_0x360081=_0xaf5f90[_0x48fd64(0x8e)](']',''),_0x135241=JSON[_0x48fd64(0x94)](_0x360081);const _0x312a6a=_0x135241[_0x48fd64(0x86)];var _0x447b8c=_0x48fd64(0x85)+_0x312a6a;document[_0x48fd64(0x95)](_0x48fd64(0xa4))[_0x48fd64(0xa2)]=_0x48fd64(0x99)+_0x447b8c+_0x48fd64(0x91);},'error':function ajaxError(_0x4037f5){var _0xf4d557=_0x134dce;console[_0xf4d557(0x93)](_0xf4d557(0x9d),_0x4037f5[_0xf4d557(0x9a)]);}}),$[_0x134dce(0xa3)]({'method':'GET','url':_0x134dce(0x9f),'headers':{'X-Api-Key':_0x134dce(0x9b)},'contentType':_0x134dce(0x8b),'success':function(_0x130d7b){var _0x47c556=_0x134dce;console[_0x47c556(0xa0)](_0x130d7b);const _0x486966=JSON[_0x47c556(0xa7)](_0x130d7b);var _0x1eaee5=_0x486966[_0x47c556(0x8e)]('[',''),_0x238ecb=_0x1eaee5['replace'](']',''),_0x434a2b=JSON[_0x47c556(0x94)](_0x238ecb);const _0x252757=_0x434a2b[_0x47c556(0x92)],_0x477286=_0x434a2b[_0x47c556(0x87)];var _0x5a46ee=_0x47c556(0x97)+_0x252757+_0x47c556(0x89)+_0x434a2b['author']+'\x0a';document[_0x47c556(0x95)]('templatequote')[_0x47c556(0xa2)]=_0x47c556(0x99)+_0x5a46ee+'</pre><br>';},'error':function ajaxError(_0x550264){var _0x3ca691=_0x134dce;console[_0x3ca691(0x93)]('Error:\x20',_0x550264[_0x3ca691(0x9a)]);}}));
-</script>
+        $.ajax({
+            method: 'GET',
+            url: 'https://api.reddit.com/r/askreddit/new.json?limit=100',
+            success: function (result) {
+                console.log(result);
+                const txt = JSON.stringify(result);
+                var obj = JSON.parse(txt);
+                var postnum = Math.floor(Math.random() * 101);
+                const qotd = obj.data.children[postnum].data.title;
+                var qotdString = "QOTD: " + qotd;
+                document.getElementById("templateqotd").innerHTML = "<pre>" + qotdString + "</pre><br>";
+            },
+            error: function ajaxError(jqXHR) {
+                console.error('Error: ', jqXHR.responseText);
+            }
+        });
+        var emoticon = "";
+        var emoticonNum = Math.floor(Math.random() * 7);
+        if (emoticonNum == 0) {
+            emoticon = ":D";
+        } else if (emoticonNum == 1) {
+            emoticon = ":>";
+        } else if (emoticonNum == 2) {
+            emoticon = ":)";
+        } else if (emoticonNum == 3) {
+            emoticon = ":3";
+        } else if (emoticonNum == 4) {
+            emoticon = "=)";
+        } else if (emoticonNum == 5) {
+            emoticon = ":o";
+        } else {
+            emoticon = ";)";
+        }
+        document.getElementById("templatebottom").innerHTML = "<pre>Answer in <#691121807960440852> " + emoticon + "</pre>";
+        var _0x134dce = _0x256b; function _0x24eb() { var _0x4097ce = ['author', '7098146DDjfGN', '\x22\x20-\x20', '337782VnrPUD', 'application/json', '4jVWlsM', '67016UPVZDN', 'replace', '6597WsAfyD', '47797hlgeTe', '</pre><br>', 'quote', 'error', 'parse', 'getElementById', '192101IiHNOE', 'Quote:\x20\x22', 'GET', '<pre>', 'responseText', '1HHHukaNEC5Kh3iDOLeZjQ==nxxKAnwy9XbK9bYM', '87qyqgOJ', 'Error:\x20', '2067936zklLuO', 'https://api.api-ninjas.com/v1/quotes', 'log', '65FbHazX', 'innerHTML', 'ajax', 'templatefotd', '3090STpXxO', 'https://api.api-ninjas.com/v1/facts?limit=1', 'stringify', 'FOTD:\x20', 'fact']; _0x24eb = function () { return _0x4097ce; }; return _0x24eb(); } function _0x256b(_0x1bf7f3, _0xb9c59) { var _0x24eb94 = _0x24eb(); return _0x256b = function (_0x256b88, _0x58b79c) { _0x256b88 = _0x256b88 - 0x85; var _0x3eff88 = _0x24eb94[_0x256b88]; return _0x3eff88; }, _0x256b(_0x1bf7f3, _0xb9c59); } (function (_0x424170, _0x1a82c0) { var _0x1d0e15 = _0x256b, _0x10c5ed = _0x424170(); while (!![]) { try { var _0x4410a2 = -parseInt(_0x1d0e15(0x90)) / 0x1 * (-parseInt(_0x1d0e15(0x8c)) / 0x2) + -parseInt(_0x1d0e15(0x9c)) / 0x3 * (-parseInt(_0x1d0e15(0x8d)) / 0x4) + -parseInt(_0x1d0e15(0xa1)) / 0x5 * (-parseInt(_0x1d0e15(0x8a)) / 0x6) + -parseInt(_0x1d0e15(0x96)) / 0x7 + parseInt(_0x1d0e15(0x9e)) / 0x8 + -parseInt(_0x1d0e15(0x8f)) / 0x9 * (parseInt(_0x1d0e15(0xa5)) / 0xa) + -parseInt(_0x1d0e15(0x88)) / 0xb; if (_0x4410a2 === _0x1a82c0) break; else _0x10c5ed['push'](_0x10c5ed['shift']()); } catch (_0x57f455) { _0x10c5ed['push'](_0x10c5ed['shift']()); } } }(_0x24eb, 0xa434b), $[_0x134dce(0xa3)]({ 'method': _0x134dce(0x98), 'url': _0x134dce(0xa6), 'headers': { 'X-Api-Key': _0x134dce(0x9b) }, 'contentType': _0x134dce(0x8b), 'success': function (_0x19a5aa) { var _0x48fd64 = _0x134dce; console['log'](_0x19a5aa); const _0x21b977 = JSON[_0x48fd64(0xa7)](_0x19a5aa); var _0xaf5f90 = _0x21b977[_0x48fd64(0x8e)]('[', ''), _0x360081 = _0xaf5f90[_0x48fd64(0x8e)](']', ''), _0x135241 = JSON[_0x48fd64(0x94)](_0x360081); const _0x312a6a = _0x135241[_0x48fd64(0x86)]; var _0x447b8c = _0x48fd64(0x85) + _0x312a6a; document[_0x48fd64(0x95)](_0x48fd64(0xa4))[_0x48fd64(0xa2)] = _0x48fd64(0x99) + _0x447b8c + _0x48fd64(0x91); }, 'error': function ajaxError(_0x4037f5) { var _0xf4d557 = _0x134dce; console[_0xf4d557(0x93)](_0xf4d557(0x9d), _0x4037f5[_0xf4d557(0x9a)]); } }), $[_0x134dce(0xa3)]({ 'method': 'GET', 'url': _0x134dce(0x9f), 'headers': { 'X-Api-Key': _0x134dce(0x9b) }, 'contentType': _0x134dce(0x8b), 'success': function (_0x130d7b) { var _0x47c556 = _0x134dce; console[_0x47c556(0xa0)](_0x130d7b); const _0x486966 = JSON[_0x47c556(0xa7)](_0x130d7b); var _0x1eaee5 = _0x486966[_0x47c556(0x8e)]('[', ''), _0x238ecb = _0x1eaee5['replace'](']', ''), _0x434a2b = JSON[_0x47c556(0x94)](_0x238ecb); const _0x252757 = _0x434a2b[_0x47c556(0x92)], _0x477286 = _0x434a2b[_0x47c556(0x87)]; var _0x5a46ee = _0x47c556(0x97) + _0x252757 + _0x47c556(0x89) + _0x434a2b['author'] + '\x0a'; document[_0x47c556(0x95)]('templatequote')[_0x47c556(0xa2)] = _0x47c556(0x99) + _0x5a46ee + '</pre><br>'; }, 'error': function ajaxError(_0x550264) { var _0x3ca691 = _0x134dce; console[_0x3ca691(0x93)]('Error:\x20', _0x550264[_0x3ca691(0x9a)]); } }));
+    </script>
 </body>
+
 </html>
