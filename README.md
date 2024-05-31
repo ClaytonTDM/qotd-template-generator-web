@@ -1,3 +1,9 @@
+hi, future clay here
+
+what the fuck was i thinking? this code fucking sucked
+
+i dont think this is even used for anything anymore lmao
+
 # World of Coding - Web QOTD Generator
 please don't sue me I made this for fun
 ## Installation
